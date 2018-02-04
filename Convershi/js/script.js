@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 function hideEl( el ) {
     el.style.visibility = 'hidden';
@@ -7,69 +6,23 @@ function hideEl( el ) {
 function showEl( el ) {
     el.style.visibility = 'show';
 }
-=======
-$(document).ready(function(){
-    $(".slide-toggle").click(function(){
-        $("#sidebar").toggle();
-    });
 
-});
-
-
-$('.slide-toggle').click(function(){
-	var $this = $(this);
-	$this.toggleClass('.slide-toggle');
-	if($this.hasClass('.slide-toggle')){
-		$this.text('>>');			
-	} else {
-		$this.text('<<');
-	}
-});
-
-$(document).ready(function(){
-    $(".toggle-text").click(function(){
-        $(".recording").hide();
-        $(".btn-file").hide();
-        $(".form-group").show();
-        $(".submit-btn").show();
-    });
-});
-
-$(document).ready(function(){
-    $(".toggle-picture").click(function(){
-    	$(".btn-file").css('visibility', 'visible');
-        $(".recording").hide();
-        $(".submit-btn").hide();
-        $(".form-group").hide();
-        $(".btn-file").show();
-    });
-});
-
-$(document).ready(function(){
-    $(".toggle-voice").click(function(){
-    	$(".recording").css('visibility', 'visible');
-        $(".recording").show();
-        $(".form-group").hide();
-        $(".submit-btn").hide();
-        $(".btn-file").hide();
-    });
-});
 
 function showImage(src, target) {
-            var fr = new FileReader();
+    var fr = new FileReader();
 
-             fr.onload = function(){
+    fr.onload = function(){
       target.src = fr.result;
     }
-           fr.readAsDataURL(src.files[0]);
+    fr.readAsDataURL(src.files[0]);
 
-        }
-        function putImage() {
-            var src = document.getElementById("select_image");
-            var target = document.getElementById("target");
-            showImage(src, target);
-        }
->>>>>>> staging
+}
+
+function putImage() {
+    var src = document.getElementById("select_image");
+    var target = document.getElementById("target");
+    showImage(src, target);
+}
 
 document.addEventListener( 'DOMContentLoaded', () => {
 
@@ -81,10 +34,12 @@ document.addEventListener( 'DOMContentLoaded', () => {
           sidebar = document.querySelector( '#sidebar' ),
           recording = document.querySelector( '.recording' ),
           submitBtn = document.querySelector( '.submit-btn' ),
+          btnFile   = document.querySelector( '.btn-file' ),
           formGroup = document.querySelector( '.form-group' ),
           slideToggle = document.querySelector( '.slide-toggle' ),
           toggleText  = document.querySelector( '.toggle-text' ),
-          toggleVoice = document.querySelector( '.toggle-voice' );
+          toggleVoice = document.querySelector( '.toggle-voice' ),
+          togglePicture = document.querySelector( '.toggle-picture' );
 
 
     
@@ -92,7 +47,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
         hideEl( recording );
         showEl( formGroup );
         showEl( submitBtn );
-    })
+    } )
 
     toggleVoice.addEventListener( 'click', () => {
         $(".recording").css('visibility', 'visible');
@@ -100,7 +55,15 @@ document.addEventListener( 'DOMContentLoaded', () => {
         showEl( recording );
         hideEl( formGroup );
         hideEl( submitBtn );
-    })
+    } )
+
+    togglePicture.addEventListener( 'click', () => {
+        hideEl( recording );
+        hideEl( submitBtn );
+        hideEl( formGroup );
+        showEl( btnFile );
+    } )
+
     slideToggle.addEventListener( 'click' , ( e ) => {
         let target = e.target;
         
