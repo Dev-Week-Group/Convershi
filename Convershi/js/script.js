@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $(".slide-toggle").click(function(){
-        $(".wrapper").animate({
+        $("#sidebar").animate({
         	width:"toggle"
         });
     });
