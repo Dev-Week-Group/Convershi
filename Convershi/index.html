@@ -1,28 +1,31 @@
 <!DOCTYPE>
 <html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Convershi</title>
-	<LINK href="css/style.css" rel="stylesheet" type="text/css">
-	<LINK href="js/script.css" rel="stylesheet" type="text/css">
-	<meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="js/script.css" rel="stylesheet" type="text/css">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 	<div class="wrapper">
+
 	    <!-- Sidebar -->
 	    <nav id="sidebar">
 	    	<h1>Convershi</h1>
 
 	    	<div class="btn-group" data-toggle="buttons">
-			  <label class="btn btn-primary active">
-			    <input type="checkbox" checked autocomplete="off"> Text
+			  <label class="btn active">
+			    <input type="radio" name="text" class="text1" autocomplete="off" checked> Text
 			  </label>
-			  <label class="btn btn-primary">
-			    <input type="checkbox" autocomplete="off"> Voice
+			  <label class="btn">
+			    <input type="radio" name="voice" class="voice1" autocomplete="off"> Voice
 			  </label>
 			</div>
 
@@ -30,8 +33,8 @@
 			  <div class="input-group-prepend">
 			    <label class="input-group-text" for="inputGroupSelect01">From</label>
 			  </div>
-			  <select class="custom-select" id="inputGroupSelect01">
-			    <option selected>Choose...</option>
+			  <select class="form-control" id="inputGroupSelect01">
+			    <option selected>Choose Language</option>
 			    <option value="1">English</option>
 			    <option value="2">Spanish</option>
 			  </select>
@@ -39,9 +42,9 @@
 
 			 <div class="input-group mb-3">
 			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="inputGroupSelect01">To</label>
+			    <label class="input-group-text" for="inputGroupSelect02">To</label>
 			  </div>
-			  <select class="custom-select" id="inputGroupSelect01">
+			  <select class="form-control" id="inputGroupSelect02">
 			    <option selected>Choose Language</option>
 			    <option value="1">English</option>
 			    <option value="2">Spanish</option>
@@ -52,8 +55,9 @@
 		  	 <div class="form-group">
 			  <label for="usr">Input</label>
 			  <input type="text" class="form-control" id="usr">
-			  <button type="button" class="btn btn-primary">Submit</button>
+			  <button type="button" class="btn">Submit</button>
 			</div>
+			<button type="button" class="btn">Recording</button>
 
 	    </nav>
 
