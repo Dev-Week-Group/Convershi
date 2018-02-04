@@ -16,9 +16,9 @@ const speech = function() {
       
     recognition.onerror = function(event) {
         console.log( event );
-      if(event.error == 'no-speech') {
-        // instructions.text('No speech was detected. Try again.');  
-      };
+        if(event.error == 'no-speech') {
+            // instructions.text('No speech was detected. Try again.');  
+        };
     }
 
     recognition.onresult = function( event ) {
