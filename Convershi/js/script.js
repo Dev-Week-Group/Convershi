@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function hideEl( el ) {
     el.style.visibility = 'hidden';
@@ -6,6 +7,69 @@ function hideEl( el ) {
 function showEl( el ) {
     el.style.visibility = 'show';
 }
+=======
+$(document).ready(function(){
+    $(".slide-toggle").click(function(){
+        $("#sidebar").toggle();
+    });
+
+});
+
+
+$('.slide-toggle').click(function(){
+	var $this = $(this);
+	$this.toggleClass('.slide-toggle');
+	if($this.hasClass('.slide-toggle')){
+		$this.text('>>');			
+	} else {
+		$this.text('<<');
+	}
+});
+
+$(document).ready(function(){
+    $(".toggle-text").click(function(){
+        $(".recording").hide();
+        $(".btn-file").hide();
+        $(".form-group").show();
+        $(".submit-btn").show();
+    });
+});
+
+$(document).ready(function(){
+    $(".toggle-picture").click(function(){
+    	$(".btn-file").css('visibility', 'visible');
+        $(".recording").hide();
+        $(".submit-btn").hide();
+        $(".form-group").hide();
+        $(".btn-file").show();
+    });
+});
+
+$(document).ready(function(){
+    $(".toggle-voice").click(function(){
+    	$(".recording").css('visibility', 'visible');
+        $(".recording").show();
+        $(".form-group").hide();
+        $(".submit-btn").hide();
+        $(".btn-file").hide();
+    });
+});
+
+function showImage(src, target) {
+            var fr = new FileReader();
+
+             fr.onload = function(){
+      target.src = fr.result;
+    }
+           fr.readAsDataURL(src.files[0]);
+
+        }
+        function putImage() {
+            var src = document.getElementById("select_image");
+            var target = document.getElementById("target");
+            showImage(src, target);
+        }
+>>>>>>> staging
 
 document.addEventListener( 'DOMContentLoaded', () => {
 
