@@ -6,6 +6,7 @@ $(document).ready(function(){
     });
 });
 
+
 $('.slide-toggle').click(function(){
 	var $this = $(this);
 	$this.toggleClass('.slide-toggle');
@@ -25,6 +26,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $(".toggle-voice").click(function(){
+    	$(".recording").css('visibility', 'visible');
         $(".recording").show();
         $(".form-group").hide();
         $(".submit-btn").hide();
