@@ -23,7 +23,6 @@ $(document).ready(function(){
         $("#form").hide();
         $(".form-group").show();
         $(".submit-btn").show();
-        $(".output").show();
     });
 });
 
@@ -32,7 +31,6 @@ $(document).ready(function(){
     	$("#form").css('visibility', 'visible');
         $(".recording").hide();
         $(".submit-btn").hide();
-        $(".output").hide();
         $(".form-group").hide();
         $("#form").show();
     });
@@ -44,6 +42,7 @@ $(document).ready(function(){
         $(".recording").show();
         $(".form-group").hide();
         $(".submit-btn").hide();
+        $("#form").hide();
     });
 });
 document.addEventListener( 'DOMContentLoaded', () => {
