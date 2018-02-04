@@ -1,37 +1,12 @@
-$(document).ready(function(){
-    $(".slide-toggle").click(function(){
-        $("#sidebar").animate({
-        	width:"toggle"
-        });
-    });
-});
 
+function hideEl( el ) {
+    el.style.visibility = 'hidden';
+}
 
-$('.slide-toggle').click(function(){
-	var $this = $(this);
-	$this.toggleClass('.slide-toggle');
-	if($this.hasClass('.slide-toggle')){
-		$this.text('>>');			
-	} else {
-			$this.text('<<');
-	}
-});
+function showEl( el ) {
+    el.style.visibility = 'show';
+}
 
-$(document).ready(function(){
-    $(".toggle-text").click(function(){
-        $(".recording").hide();
-        $(".form-group").show();
-        $(".submit-btn").show();
-    });
-});
-$(document).ready(function(){
-    $(".toggle-voice").click(function(){
-    	$(".recording").css('visibility', 'visible');
-        $(".recording").show();
-        $(".form-group").hide();
-        $(".submit-btn").hide();
-    });
-});
 document.addEventListener( 'DOMContentLoaded', () => {
 
     // ===== cache DOM ===== //
@@ -39,8 +14,43 @@ document.addEventListener( 'DOMContentLoaded', () => {
           select2 = document.querySelector( '#inputGroupSelect02' ),
           input   = document.querySelector( '#usr' ),
           content = document.querySelector( '#content' ),
+          sidebar = document.querySelector( '#sidebar' ),
           recording = document.querySelector( '.recording' ),
-          submitBtn = document.querySelector( '.submit-btn' );
+          submitBtn = document.querySelector( '.submit-btn' ),
+          formGroup = document.querySelector( '.form-group' ),
+          slideToggle = document.querySelector( '.slide-toggle' ),
+          toggleText  = document.querySelector( '.toggle-text' ),
+          toggleVoice = document.querySelector( '.toggle-voice' );
+
+
+    
+    toggleText.addEventListener( 'click', () => {
+        hideEl( recording );
+        showEl( formGroup );
+        showEl( submitBtn );
+    })
+
+    toggleVoice.addEventListener( 'click', () => {
+        $(".recording").css('visibility', 'visible');
+        $(".recording").show();
+        showEl( recording );
+        hideEl( formGroup );
+        hideEl( submitBtn );
+    })
+    slideToggle.addEventListener( 'click' , ( e ) => {
+        let target = e.target;
+        
+        if( target.classList.contains( 'slide-toggle' ) ) {
+            target.innerText = '>>';
+            sidebar.style.display = 'none'
+        } else {
+            target.innerText = '<<';
+            sidebar.style.display = 'initial';
+            sidebar.style.display = 'block';
+        }           
+        target.classList.toggle( 'slide-toggle' );
+        
+    } )
 
 
     submitBtn.addEventListener( 'click', () => {
