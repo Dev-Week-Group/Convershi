@@ -2,6 +2,8 @@ const speech = function() {
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
+
+    recognition.continuous = true;
     recognition.onstart = function() { 
         console.log( event );
     //   instructions.text('Voice recognition activated. Try speaking into the microphone.');
@@ -27,11 +29,9 @@ const speech = function() {
 
       // Get a transcript of what was said.
       let transcript = event.results[current][0].transcript;
-
-      // Add the current transcript to the contents of our Note.
-    //   noteContent += transcript;
-    //   noteTextarea.val(noteContent);
-    console.log( transcript )
+      console.log( transcript )
+      translate.translate( 'es', transcript )
+               .then( res => console.log( res['data'] ) )
     }
 
     function record() {
