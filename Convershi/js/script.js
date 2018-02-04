@@ -1,11 +1,5 @@
 
-function hideEl( el ) {
-    el.style.visibility = 'hidden';
-}
 
-function showEl( el ) {
-    el.style.visibility = 'show';
-}
 
 
 function showImage(src, target) {
@@ -44,24 +38,22 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
     
     toggleText.addEventListener( 'click', () => {
-        hideEl( recording );
-        showEl( formGroup );
-        showEl( submitBtn );
+        helper.hideEl( recording );
+        helper.showEl( formGroup );
+        helper.showEl( submitBtn );
     } )
 
     toggleVoice.addEventListener( 'click', () => {
-        $(".recording").css('visibility', 'visible');
-        $(".recording").show();
-        showEl( recording );
-        hideEl( formGroup );
-        hideEl( submitBtn );
+        helper.showEl( recording );
+        helper.hideEl( formGroup );
+        helper.hideEl( submitBtn );
     } )
 
     togglePicture.addEventListener( 'click', () => {
-        hideEl( recording );
-        hideEl( submitBtn );
-        hideEl( formGroup );
-        showEl( btnFile );
+        helper.hideEl( recording );
+        helper.hideEl( submitBtn );
+        helper.hideEl( formGroup );
+        helper.showEl( btnFile );
     } )
 
     slideToggle.addEventListener( 'click' , ( e ) => {
