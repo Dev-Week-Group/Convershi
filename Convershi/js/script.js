@@ -6,15 +6,15 @@ $(document).ready(function(){
     });
 });
 
-	$('.slide-toggle').click(function(){
-		var $this = $(this);
-		$this.toggleClass('.slide-toggle');
-		if($this.hasClass('.slide-toggle')){
-			$this.text('>>');			
-		} else {
+$('.slide-toggle').click(function(){
+	var $this = $(this);
+	$this.toggleClass('.slide-toggle');
+	if($this.hasClass('.slide-toggle')){
+		$this.text('>>');			
+	} else {
 			$this.text('<<');
-		}
-	});
+	}
+});
 
 $(document).ready(function(){
     $(".toggle-text").click(function(){
