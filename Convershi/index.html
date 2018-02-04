@@ -5,15 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Convershi</title>
+
 	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<link href="js/script.css" rel="stylesheet" type="text/css">
-	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <body>
+	<button type="button" class="btn slide-toggle" style="float: left;"><<</button>
 	<div class="wrapper">
 
 	    <!-- Sidebar -->
@@ -21,10 +22,10 @@
 	    	<h1>Convershi</h1>
 
 	    	<div class="btn-group" data-toggle="buttons">
-			  <label class="btn active">
+			  <label class="btn active toggle-text" onclick="handleText()">
 			    <input type="radio" name="text" class="text1" autocomplete="off" checked> Text
 			  </label>
-			  <label class="btn">
+			  <label class="btn toggle-voice" onclick="handleVoice()">
 			    <input type="radio" name="voice" class="voice1" autocomplete="off"> Voice
 			  </label>
 			</div>
@@ -55,9 +56,11 @@
 		  	<div class="form-group">
 				<label for="usr">Input</label>
 				<input type="text" class="form-control" id="usr">
-				<button type="button" class="btn btn-primary submit-btn">Submit</button>
 			</div>
-			<button type="button" class="btn btn-primary recording">Recording</button>
+
+			<button type="button" class="btn submit-btn">Submit</button>
+			<button type="button" class="btn recording">Recording</button>
+			<h3 >Output</h3>
 
 	    </nav>
 

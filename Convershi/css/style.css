@@ -4,6 +4,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
     text-align: center;
+    
 }
 
 p {
@@ -21,22 +22,18 @@ p {
     transition: all 0.3s;
     height:100%;
     border-spacing: 12px;
+    min-width: 250px;
+    max-width: 250px
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
+    padding: 120px;
     background: #4a3E91;
-    opacity:.7;
 }
 
 .wrapper {
     display: flex;
     align-items: stretch;
-}
-
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
 }
 
 #sidebar.active {
@@ -46,7 +43,6 @@ p {
 .btn {
     background: #4a3E91;
     color: #ffffff;
-    border-spacing: 15px;
 }
 
 .custom-select{
@@ -56,4 +52,7 @@ p {
 .input-group{
 	display: block;
 	margin: 0 auto;
+}
+.toggle{
+	text-align:left;
 }
