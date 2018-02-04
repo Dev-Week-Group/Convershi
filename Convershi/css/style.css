@@ -59,6 +59,8 @@ p {
 .recording{
 	visibility:hidden;
 }
-#form{
+.btn-file{
 	visibility:hidden;
+	display: block;
+	margin: 0 auto;
 }

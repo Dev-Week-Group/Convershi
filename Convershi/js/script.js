@@ -1,9 +1,8 @@
 $(document).ready(function(){
     $(".slide-toggle").click(function(){
-        $("#sidebar").animate({
-        	width:"toggle"
-        });
+        $("#sidebar").toggle();
     });
+
 });
 
 
@@ -13,14 +12,14 @@ $('.slide-toggle').click(function(){
 	if($this.hasClass('.slide-toggle')){
 		$this.text('>>');			
 	} else {
-			$this.text('<<');
+		$this.text('<<');
 	}
 });
 
 $(document).ready(function(){
     $(".toggle-text").click(function(){
         $(".recording").hide();
-        $("#form").hide();
+        $(".btn-file").hide();
         $(".form-group").show();
         $(".submit-btn").show();
     });
@@ -28,11 +27,11 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $(".toggle-picture").click(function(){
-    	$("#form").css('visibility', 'visible');
+    	$(".btn-file").css('visibility', 'visible');
         $(".recording").hide();
         $(".submit-btn").hide();
         $(".form-group").hide();
-        $("#form").show();
+        $(".btn-file").show();
     });
 });
 
@@ -42,7 +41,7 @@ $(document).ready(function(){
         $(".recording").show();
         $(".form-group").hide();
         $(".submit-btn").hide();
-        $("#form").hide();
+        $(".btn-file").hide();
     });
 });
 document.addEventListener( 'DOMContentLoaded', () => {
