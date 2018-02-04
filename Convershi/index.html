@@ -65,8 +65,9 @@
 			<br>
 			<button type="button" class="btn recording" onclick="handleRecording()">Recording</button>
 
+ 			<img id="target" />
 		    <label class="btn btn-default btn-file">
-		        Browse <input type="file" style="display: none;">
+		        Browse <input type="file" style="display: none;"  id="select_image" name="image" onchange="putImage()" >
 		    </label>
 
 			<h3 class="output">Output</h3>
