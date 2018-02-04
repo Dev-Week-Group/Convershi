@@ -28,6 +28,9 @@
 			  <label class="btn toggle-voice" onclick="handleVoice()">
 			    <input type="radio" name="voice" class="voice1" autocomplete="off"> Voice
 			  </label>
+			  <label class="btn toggle-picture" onclick="handlePicture()">
+			    <input type="radio" name="picture" class="picture1" autocomplete="off"> Picture
+			  </label>
 			</div>
 
 			 <div class="input-group mb-3">
@@ -61,12 +64,11 @@
 			<button type="button" class="btn submit-btn">Submit</button>
 			<br>
 			<button type="button" class="btn recording" onclick="handleRecording()">Recording</button>
-			<h3 >Output</h3>
+			<h3 class="output">Output</h3>
 
 			<form id="form" action="ajaxupload.php" method="post" enctype="multipart/form-data">
-  <input id="uploadImage" type="file" accept="image/*" name="image" />
-
-</form>
+  				<input id="uploadImage" type="file" accept="image/*" name="image" />
+			</form>
 
 	    </nav>
 

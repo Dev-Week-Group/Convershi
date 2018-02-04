@@ -20,10 +20,24 @@ $('.slide-toggle').click(function(){
 $(document).ready(function(){
     $(".toggle-text").click(function(){
         $(".recording").hide();
+        $("#form").hide();
         $(".form-group").show();
         $(".submit-btn").show();
+        $(".output").show();
     });
 });
+
+$(document).ready(function(){
+    $(".toggle-picture").click(function(){
+    	$("#form").css('visibility', 'visible');
+        $(".recording").hide();
+        $(".submit-btn").hide();
+        $(".output").hide();
+        $(".form-group").hide();
+        $("#form").show();
+    });
+});
+
 $(document).ready(function(){
     $(".toggle-voice").click(function(){
     	$(".recording").css('visibility', 'visible');
