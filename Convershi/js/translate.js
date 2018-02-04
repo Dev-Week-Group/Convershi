@@ -5,7 +5,7 @@ const translate = function() {
     }
 
 
-    return{
+    return {
         translate
     }
 }();
