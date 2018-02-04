@@ -39,12 +39,14 @@ document.addEventListener( 'DOMContentLoaded', () => {
     
     toggleText.addEventListener( 'click', () => {
         helper.hideEl( recording );
+        helper.hideEl( btnFile );        
         helper.showEl( formGroup );
         helper.showEl( submitBtn );
     } )
 
     toggleVoice.addEventListener( 'click', () => {
         helper.showEl( recording );
+        helper.hideEl( btnFile );
         helper.hideEl( formGroup );
         helper.hideEl( submitBtn );
     } )

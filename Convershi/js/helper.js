@@ -5,7 +5,7 @@ const helper = function() {
     }
     
     function showEl( el ) {
-        el.style.visibility = 'show';
+        el.style.visibility = 'visible';
     }
 
     return {
