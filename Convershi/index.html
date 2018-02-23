@@ -1,1 +1,89 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Convershi</title>
+
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="wrapper">
+
+	<button type="button" class="btn slide-toggle" style="float: left;"><<</button>
+	    <!-- Sidebar -->
+	    <nav id="sidebar">
+	    	<h1>Convershi</h1>
+
+	    	<div class="btn-group" data-toggle="buttons">
+			  <label class="btn active toggle-text" onclick="handleText()">
+			    <input type="radio" name="text" class="text1" autocomplete="off" checked> Text
+			  </label>
+			  <label class="btn toggle-voice" onclick="handleVoice()">
+			    <input type="radio" name="voice" class="voice1" autocomplete="off"> Voice
+			  </label>
+			  <label class="btn toggle-picture" onclick="handlePicture()">
+			    <input type="radio" name="picture" class="picture1" autocomplete="off"> Picture
+			  </label>
+			</div>
+
+			 <div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <label class="input-group-text" for="inputGroupSelect01">From</label>
+			  </div>
+			  <select class="form-control" id="inputGroupSelect01">
+			    <option selected>Choose Language</option>
+			    <option value="1">English</option>
+			    <option value="2">Spanish</option>
+			  </select>
+			</div>
+
+			 <div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <label class="input-group-text" for="inputGroupSelect02">To</label>
+			  </div>
+			  <select class="form-control" id="inputGroupSelect02">
+			    <option selected>Choose Language</option>
+			    <option value="1">English</option>
+			    <option value="2">Spanish</option>
+			  </select>
+			</div>
+
+
+		  	<div class="form-group">
+				<label for="usr">Input</label>
+				<input type="text" class="form-control" id="usr">
+			</div>
+
+			<button type="button" class="btn submit-btn">Submit</button>
+			<br>
+			<button type="button" class="btn recording" onclick="handleRecording()">Recording</button>
+
+ 			<img id="target" />
+		    <label class="btn btn-default btn-file">
+		        Browse <input type="file" style="display: none;"  id="select_image" name="image" onchange="putImage()" >
+		    </label>
+
+			<h3 class="output">Output</h3>
+
+	    </nav>
+
+	    <!-- Page Content -->
+	    <div id="content">
+	    </div>
+
+	</div> 
+	<script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+	<script src="js/helper.js"></script>
+	<script src="js/translate.js"></script>
+	<script src="js/speech.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
 
